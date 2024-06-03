@@ -55,18 +55,27 @@ get_header(); ?>
         </div><!--/.col-xs-12.col-sm-9-->
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
+        <div class="list-group">
+            <?php
+            $product_categories = get_terms('product_cat', 'orderby=name&hide_empty=0&parent=0');
+            if (!empty($product_categories)) {
+                foreach ($product_categories as $parent_product_category) {
+                    echo '<div class="dropdown">';
+                    echo '<a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">' . $parent_product_category->name . ' <span class="caret"></span></a>';
+
+                    $child_product_categories = get_terms('product_cat', 'orderby=name&hide_empty=0&parent=' . $parent_product_category->term_id);
+                    if (!empty($child_product_categories)) {
+                        echo '<ul class="dropdown-menu">';
+                        foreach ($child_product_categories as $child_product_category) {
+                            echo '<li><a href="' . get_term_link($child_product_category) . '">' . $child_product_category->name . '</a></li>';
+                        }
+                        echo '</ul>';
+                    }
+                    echo '</div>';
+                }
+            }
+            ?>
+        </div>
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
 

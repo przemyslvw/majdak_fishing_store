@@ -7,6 +7,8 @@
  * @subpackage majdak_store_wp_template
  * @since 1.0.0
  */
+include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 
 // ładowanie plików stylów
 function my_theme_styles() {
@@ -24,3 +26,7 @@ function my_theme_scripts() {
     wp_enqueue_script('footer-script', get_template_directory_uri() . '/assets/js/footer.js', array('jquery'), true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+// woocommerce instalaation
+include_once get_template_directory() . '/inc/install_woocommerce.php';
+include_once get_template_directory() . '/inc/install_basic_store.php';
