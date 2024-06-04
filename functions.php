@@ -27,15 +27,6 @@ function my_theme_scripts() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
-<<<<<<< HEAD
 // woocommerce instalaation
 include_once get_template_directory() . '/inc/install_woocommerce.php';
 include_once get_template_directory() . '/inc/install_basic_store.php';
-=======
-
-
-
-// woocommerce instalaation
-
-include_once get_template_directory() . '/inc/install_woocommerce.php';
->>>>>>> 3328f6fda390cde6dbaf098249c1e9f3b5cba803
