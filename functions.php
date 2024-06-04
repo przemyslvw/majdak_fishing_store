@@ -15,6 +15,7 @@ function my_theme_styles() {
     wp_enqueue_style('main-styles', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('additional-styles', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), false, 'all');
     wp_enqueue_style('header-styles', get_template_directory_uri() . '/assets/css/header.css', array(), false, 'all');
+    wp_enqueue_style('header-styles', get_template_directory_uri() . '/assets/css/home-page.css', array(), false, 'all');
 }
 add_action('wp_enqueue_scripts', 'my_theme_styles');
 
