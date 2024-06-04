@@ -182,7 +182,6 @@ add_action('woocommerce_installed', 'add_sample_products');
 
 // Load images
 
-<?php
 function add_images_on_theme_install() {
     $image_dir = get_template_directory() . '/assets/images/';
     $images = glob($image_dir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE); // Get all image files from the directory
@@ -212,6 +211,4 @@ function add_images_on_theme_install() {
 }
 
 add_action('woocommerce_installed', 'add_images_on_theme_install');
-?>
-
 ?>
