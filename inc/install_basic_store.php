@@ -138,16 +138,86 @@ $woblers = array(
     array('title' => 'Wobler Neonowa Płoć',  'tax_input' => array('product_cat' => array(30, 31)), 'price' => '49.20', 'sku' => 'WB050')
 );
 
+global $spinners;
+
+$spinners = array(
+    array('title' => 'Spinner Głęboko Nurkujący', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '45.99', 'sku' => 'SP001'),
+    array('title' => 'Spinner Klasyczny', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '25.99', 'sku' => 'SP002'),
+    array('title' => 'Spinner Łososiowy', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '55.99', 'sku' => 'SP003'),
+    array('title' => 'Spinner Szczupakowy', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '35.99', 'sku' => 'SP004'),
+    array('title' => 'Spinner Trollingowy', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '40.99', 'sku' => 'SP005'),
+    array('title' => 'Spinner Szybki', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '30.99', 'sku' => 'SP006'),
+    array('title' => 'Spinner Mały', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '20.99', 'sku' => 'SP007'),
+    array('title' => 'Spinner Średni', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '25.99', 'sku' => 'SP008'),
+    array('title' => 'Spinner Duży', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '50.99', 'sku' => 'SP009'),
+    array('title' => 'Spinner Ultra Lekki', 'tax_input' => array('product_cat' => array(30, 33)), 'price' => '15.99', 'sku' => 'SP010'),
+);
+
+$spinning = array(
+    array('title' => 'Wędka Spinningowa 1', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '99.99', 'sku' => 'SPN001'),
+    array('title' => 'Wędka Spinningowa 2', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '109.99', 'sku' => 'SPN002'),
+    array('title' => 'Wędka Spinningowa 3', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '119.99', 'sku' => 'SPN003'),
+    array('title' => 'Wędka Spinningowa 4', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '129.99', 'sku' => 'SPN004'),
+    array('title' => 'Wędka Spinningowa 5', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '139.99', 'sku' => 'SPN005'),
+    array('title' => 'Wędka Spinningowa 6', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '149.99', 'sku' => 'SPN006'),
+    array('title' => 'Wędka Spinningowa 7', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '159.99', 'sku' => 'SPN007'),
+    array('title' => 'Wędka Spinningowa 8', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '169.99', 'sku' => 'SPN008'),
+    array('title' => 'Wędka Spinningowa 9', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '179.99', 'sku' => 'SPN009'),
+    array('title' => 'Wędka Spinningowa 10', 'tax_input' => array('product_cat' => array(17, 18)), 'price' => '189.99', 'sku' => 'SPN010')
+);
+
+$feeder = array(
+    array('title' => 'Wędka Feederowa 1', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '99.99', 'sku' => 'FED001'),
+    array('title' => 'Wędka Feederowa 2', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '109.99', 'sku' => 'FED002'),
+    array('title' => 'Wędka Feederowa 3', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '119.99', 'sku' => 'FED003'),
+    array('title' => 'Wędka Feederowa 4', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '129.99', 'sku' => 'FED004'),
+    array('title' => 'Wędka Feederowa 5', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '139.99', 'sku' => 'FED005'),
+    array('title' => 'Wędka Feederowa 6', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '149.99', 'sku' => 'FED006'),
+    array('title' => 'Wędka Feederowa 7', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '159.99', 'sku' => 'FED007'),
+    array('title' => 'Wędka Feederowa 8', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '169.99', 'sku' => 'FED008'),
+    array('title' => 'Wędka Feederowa 9', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '179.99', 'sku' => 'FED009'),
+    array('title' => 'Wędka Feederowa 10', 'tax_input' => array('product_cat' => array(17, 19)), 'price' => '189.99', 'sku' => 'FED010')
+);
+$carp = array(
+    array('title' => 'Wędka Karpiowa 1', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '99.99', 'sku' => 'CARP001'),
+    array('title' => 'Wędka Karpiowa 2', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '109.99', 'sku' => 'CARP002'),
+    array('title' => 'Wędka Karpiowa 3', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '119.99', 'sku' => 'CARP003'),
+    array('title' => 'Wędka Karpiowa 4', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '129.99', 'sku' => 'CARP004'),
+    array('title' => 'Wędka Karpiowa 5', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '139.99', 'sku' => 'CARP005'),
+    array('title' => 'Wędka Karpiowa 6', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '149.99', 'sku' => 'CARP006'),
+    array('title' => 'Wędka Karpiowa 7', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '159.99', 'sku' => 'CARP007'),
+    array('title' => 'Wędka Karpiowa 8', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '169.99', 'sku' => 'CARP008'),
+    array('title' => 'Wędka Karpiowa 9', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '179.99', 'sku' => 'CARP009'),
+    array('title' => 'Wędka Karpiowa 10', 'tax_input' => array('product_cat' => array(17, 20)), 'price' => '189.99', 'sku' => 'CARP010')
+);
+
+$telescopic = array(
+    array('title' => 'Wędka Teleskopowa 1', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '99.99', 'sku' => 'TEL001'),
+    array('title' => 'Wędka Teleskopowa 2', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '109.99', 'sku' => 'TEL002'),
+    array('title' => 'Wędka Teleskopowa 3', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '119.99', 'sku' => 'TEL003'),
+    array('title' => 'Wędka Teleskopowa 4', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '129.99', 'sku' => 'TEL004'),
+    array('title' => 'Wędka Teleskopowa 5', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '139.99', 'sku' => 'TEL005'),
+    array('title' => 'Wędka Teleskopowa 6', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '149.99', 'sku' => 'TEL006'),
+    array('title' => 'Wędka Teleskopowa 7', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '159.99', 'sku' => 'TEL007'),
+    array('title' => 'Wędka Teleskopowa 8', 'tax_input' => array('product_cat' => array(17, 21)), 'price' => '169.99', 'sku' => 'TEL008'),
+);
+
 function add_sample_products()
 {
-
+    global $spinners;
     global $woblers;
+    global $spinning;
+    global $feeder;
+    global $carp;
+    global $telescopic;
 
-    foreach ($woblers as $product) {
+    $products = array_merge($spinners, $woblers, $spinning, $feeder, $carp, $telescopic);
+
+    foreach ($products as $product) {
         if (get_page_by_title($product['title'], OBJECT, 'product') == null) {
             $post_id = wp_insert_post(array(
                 'post_title' => $product['title'],
-                'post_content' => 'To jest przykładowy wobler wędkarski.',
+                'post_content' => 'Oto produkt wędkarski wysokiej jakości, zaprojektowany dla entuzjastów na każdym poziomie zaawansowania. Jego trwała konstrukcja zapewnia długowieczność i niezawodność w różnych warunkach wędkarskich. Łatwy w użyciu i bardzo skuteczny, znacząco zwiększa efektywność połowów. Idealny zarówno do wędkowania w wodach słodkich, jak i słonych.',
                 'post_status' => 'publish',
                 'post_type' => 'product',
                 'tax_input' => $product['tax_input']
