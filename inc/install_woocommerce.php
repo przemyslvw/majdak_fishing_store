@@ -23,24 +23,25 @@
 //             // Install the plugin
 //             $installed = $upgrader->install($pluginFilePath);
 
-            
+
 //             if ($installed) {
 //                 // If the plugin was installed successfully, schedule its activation
 //                 wp_schedule_single_event(time(), 'activate_woocommerce_plugin');
 //             }
-            
+
 //             // Then define the scheduled event somewhere else in your code
 //             // add_action('activate_woocommerce_plugin', function() {
 //             //     activate_plugin('woocommerce/woocommerce.php');
 //             // });
-            
+
 //         }
 //     }
 // }
 
 // add_action('after_switch_theme', 'install_woocommerce');
 
-function install_woocommerce() {
+function install_woocommerce()
+{
     // Include necessary files
     include_once ABSPATH . 'wp-admin/includes/file.php';
     include_once ABSPATH . 'wp-admin/includes/misc.php';
@@ -69,7 +70,8 @@ function install_woocommerce() {
 
 add_action('wp_loaded', 'install_woocommerce');
 
-function activate_woocommerce() {
+function activate_woocommerce()
+{
     // Include necessary files
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
@@ -81,7 +83,8 @@ function activate_woocommerce() {
 }
 add_action('activate_woocommerce_plugin', 'activate_woocommerce');
 
-function uninstall_woocommerce() {
+function uninstall_woocommerce()
+{
     // Include necessary files
     include_once ABSPATH . 'wp-admin/includes/file.php';
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
@@ -104,5 +107,3 @@ function uninstall_woocommerce() {
 }
 
 add_action('switch_theme', 'uninstall_woocommerce');
-
-?>

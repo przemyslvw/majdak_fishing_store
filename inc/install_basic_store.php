@@ -20,7 +20,8 @@ $categories = array(
     'Literatura i media' => array('Książki', 'DVD', 'Czasopisma', 'Przewodniki', 'Mapy', 'Kalendarze'),
 );
 
-function addProductCategories() {
+function addProductCategories()
+{
 
     foreach ($categories as $category => $subcategories) {
         // Insert the category into the database
@@ -46,7 +47,8 @@ function addProductCategories() {
 // Run the function after WooCommerce installation
 add_action('woocommerce_installed', 'addProductCategories');
 
-function removeProductCategories() {
+function removeProductCategories()
+{
 
     foreach ($categories as $category => $subcategories) {
         // Get the term ID of the category
@@ -133,10 +135,11 @@ $woblers = array(
     array('title' => 'Wobler Zielona Kobra', 'tax_input' => array('product_cat' => array(30, 31)), 'price' => '51.10', 'sku' => 'WB047'),
     array('title' => 'Wobler Rubinowy Karp', 'tax_input' => array('product_cat' => array(30, 31)), 'price' => '46.50', 'sku' => 'WB048'),
     array('title' => 'Wobler Górska Ryba', 'tax_input' => array('product_cat' => array(30, 31)), 'price' => '55.99', 'sku' => 'WB049'),
-    array('title' => 'Wobler Neonowa Płoć',  'tax_input' => array('product_cat' => array(30, 31)), 'price' => '49.20', 'sku' => 'WB050')   
+    array('title' => 'Wobler Neonowa Płoć',  'tax_input' => array('product_cat' => array(30, 31)), 'price' => '49.20', 'sku' => 'WB050')
 );
 
-function add_sample_products() {
+function add_sample_products()
+{
 
     global $woblers;
 
@@ -182,7 +185,8 @@ add_action('woocommerce_installed', 'add_sample_products');
 
 // Load images
 
-function add_images_on_theme_install() {
+function add_images_on_theme_install()
+{
     $image_dir = get_template_directory() . '/assets/images/';
     $images = glob($image_dir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE); // Get all image files from the directory
 
@@ -211,4 +215,3 @@ function add_images_on_theme_install() {
 }
 
 add_action('woocommerce_installed', 'add_images_on_theme_install');
-?>
