@@ -1,3 +1,70 @@
+<style>
+    /* Style for the product list item */
+    .product {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        transition: box-shadow .3s ease-in-out;
+    }
+
+    .product:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    }
+
+    /* Style for the product link */
+    .product a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Style for the product image */
+    .product img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    /* Style for the product title */
+    .product .woocommerce-loop-product__title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* Style for the product price */
+    .product .price {
+        margin-bottom: 15px;
+        color: #007bff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Style for the add to cart button */
+    .product .button {
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition: background-color .3s;
+        display: inline-block;
+
+    }
+
+
+    .product .button:hover {
+        background-color: #0056b3;
+    }
+
+    li::marker {
+        content: "";
+    }
+</style>
+
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
