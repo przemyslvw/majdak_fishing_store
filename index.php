@@ -21,7 +21,13 @@ get_header(); ?>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
             <?php
-            include 'pages/home-products.php';
+            if (is_page()) {
+                // Jeśli jesteś na dowolnej stronie statycznej, wyświetl jej treść
+                the_content();
+            } else {
+                // W przeciwnym razie załącz plik strony głównej
+                include 'pages/home-products.php';
+            }
             ?>
         </main>
     </div>

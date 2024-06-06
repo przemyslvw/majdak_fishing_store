@@ -60,3 +60,19 @@ function customize_product_tabs($tabs)
 
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 remove_all_actions('woocommerce_after_single_product_summary');
+
+// Cart page instalation 
+function create_woocommerce_pages()
+{
+    if (!function_exists('wc_create_page')) {
+        return;
+    }
+
+    $cart_page_id = wc_create_page(esc_sql(_x('cart', 'page_slug', 'woocommerce')), 'woocommerce_cart_page_id', __('Cart', 'woocommerce'), '[woocommerce_cart]', wc_get_page_id('shop'));
+
+    if ($cart_page_id) {
+        update_option('woocommerce_cart_page_id', $cart_page_id);
+    }
+}
+
+add_action('after_switch_theme', 'create_woocommerce_pages');
